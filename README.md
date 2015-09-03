@@ -1,1 +1,2 @@
-# cs2610
+# cs2610 Adam, Dustin, Jeff, Devan
+# Web Application Development
