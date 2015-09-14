@@ -1,0 +1,68 @@
+/** Search Results **/
+nav.top-bar-fixed {
+  position: fixed;
+  width:100%;
+  height: 50px;
+  text-align: center;
+  background-color: rgba(0, 58, 255, 0.12);
+  top:-5px;
+}
+
+nav.top-bar-fixed > ul {
+  list-style-type: none;
+  height: 50px;
+  width: 50%;
+  float:left;
+  margin: 0 50px;
+}
+
+nav.top-bar-fixed > ul > li {
+  width: 75px;
+  height: inherit;
+  float: left;
+  background-color: #4C96FF;
+  color: white;
+  display: table;
+  border: white solid 1px;
+}
+
+nav.top-bar-fixed > ul > li:first-child {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+nav.top-bar-fixed > ul > li:last-child {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+section.results-pane {
+  width: 960px;
+  float: left;
+  margin: 10px;
+  top: 20px;
+  position: relative;
+}
+
+section.results-pane > ul {
+  list-style-type: none;
+}
+
+.right {
+  float: right;
+  position: relative;
+  margin-right: 10px;
+}
+
+.middle {
+  vertical-align: middle;
+  display: table-cell;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.wrapper {
+  display: table;
+  height: inherit;
+}
