@@ -1,1 +1,72 @@
 
+/** Search Results **/
+header {
+  display: block;
+  height: 50px;
+}
+
+nav.top-bar-fixed {
+  position: fixed;
+  width:100%;
+  height: inherit;
+  text-align: center;
+  background-color: rgba(0, 58, 255, 0.12);
+  top:-5px;
+}
+
+nav.top-bar-fixed > ul {
+  list-style-type: none;
+  height: inherit;
+  width: 50%;
+  float:left;
+  margin: 0 50px;
+}
+
+nav.top-bar-fixed > ul > li {
+  width: 75px;
+  height: inherit;
+  float: left;
+  background-color: #4C96FF;
+  color: white;
+  display: table;
+  border: white solid 1px;
+}
+
+nav.top-bar-fixed > ul > li:hover {
+  background-color: #0052C5
+}
+
+nav.top-bar-fixed > ul > li:first-child {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+nav.top-bar-fixed > ul > li:last-child {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.right {
+  float: right;
+  position: relative;
+  margin-right: 50px;
+}
+
+.middle {
+  vertical-align: middle;
+  display: table-cell;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.container {
+  width: 1080px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper {
+  display: table;
+  height: inherit;
+}
