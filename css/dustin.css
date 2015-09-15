@@ -38,3 +38,28 @@ aside.saved-searches > div:first-child {
   border: #333333 solid 1px;
   border-radius: 10px;
 }
+
+@media only screen and (max-width: 1079px) {
+  section.results-pane {
+    width: 100%;
+    float:none;
+    position: relative;
+  }
+
+  section.results-pane > ul > li {
+    margin-bottom: 10px;
+  }
+
+  section.results-pane > ul > li > div.result {
+    width: 100px;
+    height: 100px;
+  }
+
+  aside.saved-searches {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    right:inherit;
+    margin: 0 auto;
+  }
+}
