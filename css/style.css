@@ -12,9 +12,14 @@ nav.top-bar-fixed {
   text-align: center;
   background-color: rgba(0, 58, 255, 0.12);
   top:-5px;
+  z-index: 999999;
 }
 
-nav.top-bar-fixed > ul {
+nav.top-bar-fixed > div.container {
+  height: inherit;
+}
+
+nav.top-bar-fixed > div > ul {
   list-style-type: none;
   height: inherit;
   width: 50%;
@@ -22,8 +27,8 @@ nav.top-bar-fixed > ul {
   margin: 0 50px;
 }
 
-nav.top-bar-fixed > ul > li {
-  width: 75px;
+nav.top-bar-fixed > div > ul > li {
+  width: 100px;
   height: inherit;
   float: left;
   background-color: #4C96FF;
@@ -32,19 +37,22 @@ nav.top-bar-fixed > ul > li {
   border: white solid 1px;
 }
 
-nav.top-bar-fixed > ul > li:hover {
+nav.top-bar-fixed > div > ul > li:hover {
   background-color: #0052C5
 }
 
-nav.top-bar-fixed > ul > li:first-child {
+/* Uncomment this section for pill box style list
+nav.top-bar-fixed > div > ul > li:first-child {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
 }
 
-nav.top-bar-fixed > ul > li:last-child {
+
+nav.top-bar-fixed > div > ul > li:last-child {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
+*/
 
 .right {
   float: right;
@@ -64,6 +72,7 @@ nav.top-bar-fixed > ul > li:last-child {
   width: 1080px;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .wrapper {

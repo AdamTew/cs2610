@@ -1,7 +1,7 @@
 @import url("style.css");
 
 section.results-pane {
-  width: 960px;
+  width: 780px;
   float: left;
   position: relative;
 }
@@ -10,14 +10,31 @@ section.results-pane > ul {
   list-style-type: none;
 }
 
+section.results-pane > ul > li {
+  margin-bottom: 20px;
+}
+
+section.results-pane > ul > li > div.result {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 aside.saved-searches {
-  width: 120px;
+  width: 240px;
   height: 240px;
-  float:right;
+  position: fixed;
+  right: 10%;
 }
 
 aside.saved-searches > div:first-child {
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.08);
   width: inherit;
   height: inherit;
+  border: #333333 solid 1px;
+  border-radius: 10px;
 }
