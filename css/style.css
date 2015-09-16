@@ -11,7 +11,6 @@ nav.top-bar-fixed {
   height: inherit;
   text-align: center;
   background-color: #99FCDF;
-  top:-5px;
   z-index: 999999;
 }
 
@@ -39,11 +38,8 @@ nav.top-bar-fixed > div > ul > li {
 
 nav.top-bar-fixed > div > ul > li:last-child {
   width: initial;
-  height: inherit;
-  float: left;
   background-color: transparent;
-  display: table;
-  border: white solid 1px;
+  border-right: none;
 }
 
 nav.top-bar-fixed > div > ul > li:not(.search):hover {

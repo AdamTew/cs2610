@@ -63,3 +63,13 @@ aside.saved-searches > div:first-child {
     margin: 0 auto;
   }
 }
+
+html, body {
+  background-color: #EEE;
+  margin:0;
+  padding:0;
+}
+
+body > div.container {
+  background-color: white;
+}
