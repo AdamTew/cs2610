@@ -1,5 +1,8 @@
+@import url("icono.min.css");
+* {
+  -webkit-padding-start: 0;
+}
 
-/** Search Results **/
 header {
   display: block;
   height: 50px;
@@ -21,19 +24,22 @@ nav.top-bar-fixed > div.container {
 nav.top-bar-fixed > div > ul {
   list-style-type: none;
   height: inherit;
-  width: inherit;%;
-  float:left;
+  width: inherit;
   margin: 0 auto;
 }
 
 nav.top-bar-fixed > div > ul > li {
   width: 100px;
   height: inherit;
-  float: left;
   background-color: #4C96FF;
   color: white;
   display: table;
   border: white solid 1px;
+}
+
+nav.top-bar-fixed a {
+  color: white;
+  text-decoration: none;
 }
 
 nav.top-bar-fixed > div > ul > li:last-child {
@@ -59,7 +65,7 @@ nav.top-bar-fixed input[type=text] {
   background-color: white;
   padding: 0 2px;
   margin: 7px 0;
-  float: left;
+  display: none;
 }
 
 nav.top-bar-fixed form > div.go-button {
@@ -68,7 +74,6 @@ nav.top-bar-fixed form > div.go-button {
   width: 40px;
   height: inherit;
   border: 1px solid #d8d8d8;
-  float: left;
   text-align: center;
 }
 
@@ -77,10 +82,9 @@ nav.top-bar-fixed form > div.go-button:hover {
 }
 
 nav.top-bar-fixed form > div.go-button > a{
-  color:white;
-  height: inherit;
-  width: inherit;
-  text-decoration: none;
+  max-height: 40px;
+  max-width: 40px;
+  margin-top: 10px;
 }
 
 /* Uncomment this section for pill box style list
@@ -115,7 +119,8 @@ nav.top-bar-fixed > div > ul > li:last-child {
 }
 
 .container {
-  width: 1080px;
+  width: 100%;
+  max-width: 1080px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -129,5 +134,14 @@ nav.top-bar-fixed > div > ul > li:last-child {
 @media only screen and (max-width: 1079px){
   .container {
     width: 100%;
+  }
+
+  nav.top-bar-fixed input[type=text] {
+    display: none;
+  }
+
+  nav.top-bar-fixed > div > ul > li {
+    width: 75px;
+    font-size:80%;
   }
 }

@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Search Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="charset" content="utf-8">
     <meta name="description" content="CS2610 Project">
     <link rel="stylesheet" type="text/css" href="css/dustin.css">
@@ -10,25 +11,25 @@
     <header>
       <nav class="top-bar-fixed">
         <div class="container">
-          <ul>
-            <li>
-              <div class="middle">Home</div>
+          <ul class="left">
+            <li class="left">
+              <div class="middle"><a href="index.html" class="icono-home"></a></div>
             </li>
-            <li>
+            <li class="left">
               <div class="middle">Dashboard</div>
             </li>
-            <li>
+            <li class="left">
               <div class="middle">Profile</div>
             </li>
-            <li>
+            <li class="left">
               <div class="middle">Search</div>
             </li>
-            <li class="search">
-              <div class="wrapper left">
+            <li class="search left">
+              <div class="wrapper">
                 <form id="searchbar" class="middle">
-                  <input type="text" name="Search" id="search" placeholder="Search">
-                  <div class="go-button">
-                    <a class="middle" href="#">Go</a>
+                  <input type="text" class="left" name="Search" id="search" placeholder="Search">
+                  <div class="go-button left">
+                    <a class="icono-search" href="#"></a>
                   </div>
                 </form>
               </div>
@@ -38,12 +39,12 @@
       </nav>
     </header>
     <div class="container">
-      <aside class="saved-searches">
-        <div>
-          <p> </p>
-        </div>
-      </aside>
-      <section class="results-pane">
+      <section class="results-pane left">
+        <aside class="saved-searches">
+          <div>
+            <p> </p>
+          </div>
+        </aside>
         <ul>
           <li>
             <div class="result"><img src="img/placeholder.jpg" alt="Test 1"></div>
