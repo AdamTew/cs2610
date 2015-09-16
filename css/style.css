@@ -58,18 +58,16 @@ nav.top-bar-fixed input[type=text] {
   border-top-left-radius: 5px;
   background-color: white;
   padding: 0 2px;
-  margin-left: -1px;
+  margin: 7px 0;
   float: left;
 }
 
 nav.top-bar-fixed form > div.go-button {
-  margin-left: 0;
+  margin-left: -1px;
   background-color: #4C96FF;
   width: 40px;
-  height: 30px;
+  height: inherit;
   border: 1px solid #d8d8d8;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
   float: left;
   text-align: center;
 }
