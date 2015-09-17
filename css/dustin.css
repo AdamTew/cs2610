@@ -13,13 +13,33 @@ section.results-pane > ul > li {
 }
 
 section.results-pane > ul > li > div.result {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   position: relative;
   margin: 0 auto;
-  background-color: rgba(0,0,0,0.08);
+  background-color: rgba(0, 53, 255, 0.21);
   border-radius: 10px;
   overflow: hidden;
+  padding: 10px;
+}
+
+div.result > figure {
+  width: 550px;
+  height: 550px;
+  overflow: hidden;
+  margin: 10px auto;
+  margin-bottom: 0;
+  border-radius: 10px;
+}
+
+div.result a.icono-checkCircle {
+  margin: 10px auto;
+  display: inline-block;
+  color: #5A00FF;
+}
+
+div.result a.icono-checkCircle:hover {
+  color: #333;
 }
 
 aside.saved-searches {
@@ -63,14 +83,4 @@ aside.saved-searches > div:first-child {
     margin: 20px auto;
     transform: translateX(0%);
   }
-}
-
-html, body {
-  background-color: #EEE;
-  margin:0;
-  padding:0;
-}
-
-body > div.container {
-  background-color: white;
 }

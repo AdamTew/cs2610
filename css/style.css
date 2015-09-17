@@ -3,6 +3,12 @@
   -webkit-padding-start: 0;
 }
 
+html, body {
+  background-color: rgba(41, 24, 185, 0.42);;
+  margin:0;
+  padding:0;
+}
+
 header {
   display: block;
   height: 50px;
@@ -15,16 +21,29 @@ nav.top-bar-fixed {
   text-align: center;
   background-color: #99FCDF;
   z-index: 999999;
+  animation: psychadelic 25s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes psychadelic
+{
+  0%   {background: #FC9999;}
+  25%  {background: #F0FC99;}
+  50%  {background: #99C9FC;}
+  75%  {background: #99FCDF;}
+  100% {background: #FC9999;}
 }
 
 nav.top-bar-fixed > div.container {
   height: inherit;
+  background-color: transparent;
 }
 
 nav.top-bar-fixed > div > ul {
   list-style-type: none;
   height: inherit;
-  width: inherit;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -42,18 +61,18 @@ nav.top-bar-fixed a {
   text-decoration: none;
 }
 
-nav.top-bar-fixed > div > ul > li:last-child {
-  width: initial;
-  background-color: transparent;
-  border-right: none;
+nav.top-bar-fixed > div > ul > li:hover {
+  background-color: #0052C5;
 }
 
-nav.top-bar-fixed > div > ul > li:not(.search):hover {
-  background-color: #0052C5;
+nav.top-bar-fixed > div > ul > li:hover a, li:hover a::before {
+  color: #333;
 }
 
 nav.top-bar-fixed form {
   height: inherit;
+  width: 100px;
+  text-align: center;
 }
 
 nav.top-bar-fixed input[type=text] {
@@ -66,25 +85,6 @@ nav.top-bar-fixed input[type=text] {
   padding: 0 2px;
   margin: 7px 0;
   display: none;
-}
-
-nav.top-bar-fixed form > div.go-button {
-  margin-left: -1px;
-  background-color: #4C96FF;
-  width: 40px;
-  height: inherit;
-  border: 1px solid #d8d8d8;
-  text-align: center;
-}
-
-nav.top-bar-fixed form > div.go-button:hover {
-  background-color: #0052C5;
-}
-
-nav.top-bar-fixed form > div.go-button > a{
-  max-height: 40px;
-  max-width: 40px;
-  margin-top: 10px;
 }
 
 /* Uncomment this section for pill box style list
@@ -124,11 +124,16 @@ nav.top-bar-fixed > div > ul > li:last-child {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  background-color: #FFFFFF;
 }
 
 .wrapper {
   display: table;
   height: inherit;
+}
+
+.center {
+  text-align: center;
 }
 
 @media only screen and (max-width: 1079px){
