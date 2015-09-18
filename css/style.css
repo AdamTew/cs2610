@@ -46,7 +46,7 @@ nav.top-bar-fixed > div.container {
   background-color: transparent;
 }
 
-.hide-for-small > nav.top-bar-fixed > div > ul {
+nav.top-bar-fixed > div > ul {
   list-style-type: none;
   height: inherit;
   width: 50%;
