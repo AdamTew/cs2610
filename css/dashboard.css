@@ -155,7 +155,7 @@ nav {
   -moz-justify-content: space-between;
   justify-content: space-between;*/
 }
-  nav a {
+/*  nav a {
     border: solid 1px;
     color: #CCC;
     display: inline-block;
@@ -170,7 +170,7 @@ nav {
     nav a:last-child {
       margin: 0;
     }
-
+*/
 /*------------------------------------*\
                 ¡FOOTER
 \*------------------------------------*/

@@ -4,50 +4,53 @@
 	<meta charset="UTF-8">
 	<title>Dashboard</title>
 	<link href="css/dashboard.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<div class="wrap">
-		<header>
-			<div class="squeeze">
-				<h1>Header</h1>
-			</div>
-		</header>
-		<div class="nav-wrap">
-			<div class="squeeze">
-				<nav>
-					<a href="">Link</a>
-					<a href="">Link</a>
-					<a href="">Link</a>
-					<a href="">Link</a>
-					<a href="">Link</a>
-				</nav>
-			</div>
-		</div>
-		<div class="content">
+	<input type="checkbox" id="nav-toggle" class="nav-toggle show-for-small" />
+	<label for="nav-toggle" class="icono-hamburger show-for-small"></label>
+	<header>
+	  <nav class="top-bar-fixed">
+	    <div class="container hide-for-small">
+	      <ul class="center">
+	        <li class="left">
+	          <div class="middle"><a href="index.html" class="icono-home"></a></div>
+	        </li>
+	        <li class="left">
+	          <div class="middle"><a href="dashboard.html" class="icono-user"></a></div>
+	        </li>
+	        <li class="left">
+	          <div class="middle"><a href="profile.html" class="icono-gear"></a></div>
+	        </li>
+	        <li class="left">
+	            <div class="middle"><a class="icono-search" href="search.html"></a></div>
+	        </li>
+	      </ul>
+	    </div>
+	  </nav>
+	</header>
+	<div class="site-wrap">
+	    <div class="show-for-small">
+	      <div class="small-nav">
+	        <ul class="right">
+	          <li>
+	            <div class="middle"><a href="index.html" class="icono-home"></a></div>
+	          </li>
+	          <li>
+	            <div class="middle"><a href="dashboard.html" class="icono-user"></a></div>
+	          </li>
+	          <li>
+	            <div class="middle"><a href="profile.html" class="icono-gear"></a></div>
+	          </li>
+	          <li><div class="middle"><a class="icono-search" href="search.html"></a></div>
+	          </li>
+	        </ul>
+	      </div>
+	    </div>
+		<div class="container">
 			<div class="squeeze">
 				<!-- <img style="display:block; margin: 20px auto;" src="/img/css.gif" /> -->
 				<div class="box-wrap lk-clear">
-					<div class="box">
-						<img src="http://placehold.it/300x200" />
-						<div class="group-btn lk-clear">
-							<button class="btn accent-1 pull--left">Love it!</button>
-							<button class="btn accent-1 pull--right">Hate it!</button>
-						</div>
-					</div>
-					<div class="box">
-						<img src="http://placehold.it/300x200" />
-						<div class="group-btn lk-clear">
-							<button class="btn accent-1 pull--left">Love it!</button>
-							<button class="btn accent-1 pull--right">Hate it!</button>
-						</div>
-					</div>
-					<div class="box">
-						<img src="http://placehold.it/300x200" />
-						<div class="group-btn lk-clear">
-							<button class="btn accent-1 pull--left">Love it!</button>
-							<button class="btn accent-1 pull--right">Hate it!</button>
-						</div>
-					</div>
 					<div class="box">
 						<img src="http://placehold.it/300x200" />
 						<div class="group-btn lk-clear">
@@ -76,7 +79,6 @@
 	</div>
 	<footer>
 		<div class="squeeze">
-			<h4>Footer</h4>
 		</div>
 	</footer>
 </body>
