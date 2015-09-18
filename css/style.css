@@ -46,7 +46,7 @@ nav.top-bar-fixed > div.container {
   background-color: transparent;
 }
 
-div.hide-for-small > nav.top-bar-fixed > div > ul {
+.hide-for-small > nav.top-bar-fixed > div > ul {
   list-style-type: none;
   height: inherit;
   width: 50%;
@@ -165,6 +165,10 @@ div.small-nav > ul > li {
   background-color: #FFFFFF;
 }
 
+.site-wrap {
+  background-color: transparent;
+}
+
 .wrapper {
   display: table;
   height: inherit;
@@ -183,6 +187,10 @@ div.small-nav > ul > li {
     background-color: transparent;
     margin:0;
     padding:0;
+  }
+
+  .site-wrap{
+    background-color: #FFFFFF;
   }
 
   .container {

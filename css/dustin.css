@@ -2,6 +2,7 @@
 section.results-pane {
   width: 780px;
   position: relative;
+  margin-top: 20px;
 }
 
 section.results-pane > ul {
