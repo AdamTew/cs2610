@@ -113,13 +113,20 @@ ul{
 	width: 375px;
 	margin: 0 auto;
 	color: #FFF;
-	margin-bottom: -320px;
+	margin-bottom: -270px;
 	z-index: 100;
 }
 
-.signInForm .submit{
-	color: red;
-	padding: 10px;
+.signInForm input[type=submit] {
+	padding:5px 15px;
+	background: #9090e9;
+	width: 140px;
+	height: 40px;
+	font-size: 18px;
+	margin: 10px auto;
+	color: #FFF;
+	border:0 none;
+
 }
 
 .signInBox{
@@ -133,7 +140,25 @@ ul{
  }
 
 .signInForm input[type=text], input[type=password] {
-	width: 380px;
-	height: 30px;
+	width: 360px;
+	height: 15px;
+	padding: 15px;
 	margin: 10px;
+	margin-left: -10px;
+	font-size: 18px;
  }
+
+.signInForm label{
+	font-size: 13px;
+
+}
+
+.login-help{
+	font-size: 13px;
+}
+
+.login-help a {
+	font-size: 13px;
+	color: #63b193;
+	text-decoration: none;
+}
