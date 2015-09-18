@@ -8,9 +8,11 @@
     <link rel="stylesheet" type="text/css" href="css/dustin.css">
   </head>
   <body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="icono-hamburger"></label>
     <header>
       <nav class="top-bar-fixed">
-        <div class="container">
+        <div class="container hide-for-small">
           <ul class="center">
             <li class="left">
               <div class="middle"><a href="index.html" class="icono-home"></a></div>
@@ -21,19 +23,14 @@
             <li class="left">
               <div class="middle"><a href="profile.html" class="icono-gear"></a></div>
             </li>
-            <li class="search left">
-              <div class="wrapper">
-                <form id="searchbar" class="middle">
-                  <input type="text" class="left" name="Search" id="search" placeholder="Search">
-                  <a class="icono-search" href="#"></a>
-                </form>
-              </div>
+            <li class="left">
+                <div class="middle"><a class="icono-search" href="search.html"></a></div>
             </li>
           </ul>
         </div>
       </nav>
     </header>
-    <div class="container">
+    <div class="site-wrap">
       <section class="results-pane left">
         <aside class="saved-searches">
           <div class="center">
@@ -93,6 +90,23 @@
           </li>
         </ul>
       </section>
+    </div>
+    <div class="show-for-small">
+      <div class="small-nav">
+        <ul class="right">
+          <li>
+            <div class="middle"><a href="index.html" class="icono-home"></a></div>
+          </li>
+          <li>
+            <div class="middle"><a href="dashboard.html" class="icono-user"></a></div>
+          </li>
+          <li>
+            <div class="middle"><a href="profile.html" class="icono-gear"></a></div>
+          </li>
+          <li><div class="middle"><a class="icono-search" href="search.html"></a></div>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
