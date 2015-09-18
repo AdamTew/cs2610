@@ -63,9 +63,11 @@ aside.saved-searches > div:first-child {
 div.search {
   width: 100%;
   margin-top: 40px;
+  display: block;
+  overflow: hidden;
 }
 
-div.search > input[type="text"] {
+div.search input[type="text"] {
   width: 720px;
   height: 40px;
   border: #ADADAD solid 1px;
@@ -75,10 +77,9 @@ div.search > input[type="text"] {
   background-color: #F7F7F7;
   font-size: 1.5em;
   float: left;
-  margin-left: 20px;
 }
 
-div.search > div.go-button {
+div.search div.go-button {
   width: 50px;
   height: 50px;
   float: left;
@@ -88,13 +89,16 @@ div.search > div.go-button {
   background-color: #4C96FF;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-}
-
-div.search > div.go-button a {
   text-decoration: none;
   color: #FFFFFF;
   font-size: 1.5em;
   line-height: 50px;
+  cursor: pointer;
+}
+
+div.search div.go-button:hover {
+  color: #333;
+  background-color: #0052C5;
 }
 
 @media only screen and (max-width: 1079px) {
@@ -122,4 +126,10 @@ div.search > div.go-button a {
     padding-top: 20px;
     transform: translateX(0%);
   }
+
+  div.search input[type="text"] {
+    width: 200px;
+    font-size: 1em;
+  }
+
 }

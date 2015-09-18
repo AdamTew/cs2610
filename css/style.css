@@ -60,6 +60,7 @@ nav.top-bar-fixed > div > ul > li {
   color: white;
   display: table;
   border: white solid 1px;
+  cursor: pointer;
 }
 
 nav.top-bar-fixed a {
@@ -67,11 +68,11 @@ nav.top-bar-fixed a {
   text-decoration: none;
 }
 
-nav.top-bar-fixed > div > ul > li:hover {
+nav.top-bar-fixed > div > ul > li:hover, nav.top-bar-fixed > div > ul > li > a:active {
   background-color: #0052C5;
 }
 
-nav.top-bar-fixed > div > ul > li:hover a, li:hover a::after {
+nav.top-bar-fixed > div > ul > li:hover a {
   color: #333;
 }
 
@@ -172,6 +173,7 @@ div.small-nav > ul > li {
 .wrapper {
   display: table;
   height: inherit;
+  margin: 0 auto;
 }
 
 .center {
@@ -203,5 +205,11 @@ div.small-nav > ul > li {
 
   .hide-for-small {
     display:none;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  div.site-wrap {
+    right: 0;
   }
 }
