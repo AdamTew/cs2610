@@ -1,4 +1,18 @@
 @import url("style.css");
+
+/************************/
+/** Contents           **/
+/** ------------------ **/
+/**  1. Results        **/
+/**  2. Saved Searches **/
+/**  3. Search Bar     **/
+/**  4. Small Screens  **/
+/************************/
+
+
+/****************/
+/** 1. Results **/
+/****************/
 section.results-pane {
   width: 780px;
   position: relative;
@@ -43,6 +57,9 @@ div.result a.icono-checkCircle:hover {
   color: #333;
 }
 
+/***********************/
+/** 2. Saved Searches **/
+/***********************/
 aside.saved-searches {
   width: 240px;
   height: 240px;
@@ -60,6 +77,9 @@ aside.saved-searches > div:first-child {
   border-radius: 10px;
 }
 
+/*******************/
+/** 3. Search Bar **/
+/*******************/
 div.search {
   width: 100%;
   margin-top: 40px;
@@ -101,6 +121,9 @@ div.search div.go-button:hover {
   background-color: #0052C5;
 }
 
+/****************************/
+/** 4. Small screen styles **/
+/****************************/
 @media only screen and (max-width: 1079px) {
   section.results-pane {
     width: 100%;

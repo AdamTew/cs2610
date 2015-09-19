@@ -1,6 +1,18 @@
 @import url("icono.min.css");
 
-/** General **/
+/************************/
+/** Contents           **/
+/** ------------------ **/
+/**  1. Global         **/
+/**  2. Navigation     **/
+/**  3. Off-canvas Nav **/
+/**  4. Gen. Layout    **/
+/**  5. Show-For-Small **/
+/************************/
+
+/****************/
+/** 1. Global **/
+/****************/
 * {
   -webkit-padding-start: 0;
 }
@@ -20,7 +32,9 @@ header {
   height: 50px;
 }
 
-/** Navigation **/
+/*******************/
+/** 2. Navigation **/
+/*******************/
 nav.top-bar-fixed {
   position: fixed;
   width:100%;
@@ -76,7 +90,9 @@ nav.top-bar-fixed > div > ul > li:hover a {
   color: #333;
 }
 
-/** Off-canvas-menu for small screens **/
+/******************************************/
+/** 3. Off-canvas-menu for small screens **/
+/******************************************/
 input.nav-toggle {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -97,19 +113,10 @@ input.nav-toggle + label, .site-wrap {
   transition: right 0.5s;
 }
 
-/*input.nav-toggle:checked + label {
-  right: 115px;
-}*/
-
 input.nav-toggle:checked ~ .site-wrap {
   right: 100px;
   box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
 }
-
-/*
-input.nav-toggle:checked ~ .small-nav {
-  left:80%;
-}*/
 
 div.small-nav {
   height: 100%;
@@ -131,6 +138,9 @@ div.small-nav > ul > li {
   margin: 20px;
 }
 
+/*******************************/
+/** 4. General layout classes **/
+/*******************************/
 .site-wrap {
   min-height: 100%;
   min-width: 100%;
@@ -185,6 +195,10 @@ div.small-nav > ul > li {
   display:none;
 }
 
+/******************************/
+/** 5. Media query targeting **/
+/** medium to small screens  **/
+/******************************/
 @media only screen and (max-width: 1079px){
   html, body {
     background-color: transparent;
@@ -206,11 +220,5 @@ div.small-nav > ul > li {
 
   .hide-for-small {
     display:none;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  div.site-wrap {
-    right: 0;
   }
 }
