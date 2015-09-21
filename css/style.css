@@ -77,16 +77,20 @@ nav.top-bar-fixed > div > ul > li {
   cursor: pointer;
 }
 
-nav.top-bar-fixed a {
+nav.top-bar-fixed div.nav-item {
+  width: 100px;
+  height: 50px;
+}
+
+nav.top-bar-fixed div.nav-item > div {
   color: white;
-  text-decoration: none;
 }
 
 nav.top-bar-fixed > div > ul > li:hover, nav.top-bar-fixed > div > ul > li > a:active {
   background-color: #0052C5;
 }
 
-nav.top-bar-fixed > div > ul > li:hover a {
+nav.top-bar-fixed > div > ul > li:hover div {
   color: #333;
 }
 
