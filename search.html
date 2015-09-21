@@ -51,15 +51,19 @@
         <div class="search center">
           <div class="wrapper">
             <input type="text" name="search" placeholder="Search...">
-            <div class="go-button">
+            <div class="go-button" onclick="search();">
                 Go
             </div>
           </div>
         </div>
         <section class="results-pane left">
+          <h3>No results...</h3>
           <aside class="saved-searches">
             <div class="center">
               <h2>Saved Searches <hr></h2>
+              <div class="saved-search">
+                <p>#awesome</p>
+              </div>
             </div>
           </aside>
           <ul>
@@ -134,5 +138,7 @@
         </ul>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/dustin.js"></script>
   </body>
 </html>
