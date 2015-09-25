@@ -1,67 +1,96 @@
 <!doctype html>
 <html>
   <head>
-    <title>Project Name</title>
+    <title>Template</title>
     <meta name="charset" content="utf-8">
     <meta name="description" content="CS2610 Project">
     <link rel="stylesheet" type="text/css" href="css/jeff.css">
   </head>
   <body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle show-for-small" />
+    <label for="nav-toggle" class="icono-hamburger show-for-small"></label>
     <header>
       <nav class="top-bar-fixed">
-        <div class="navCentered">
-          <ul>
-            <li>
-              <div id="logo"><a href = "#">Project Name</a></div>
+        <div class="container hide-for-small">
+          <ul class="center">
+            <li class="left">
+              <div class="middle"><a href="index.html" class="icono-home"></a></div>
             </li>
-            <div class = "navGroup">
-				<li>
-					<div class = "searchBar"><div class="wrapper right">
-						<form id="searchbar" class="middle">
-							<a href="#" class="icon"></a>
-							<input type="text" name="Search" id="search" placeholder="Search">
-						</form>
-					</div></div>
-				</li>
-				<li>
-				  <div class="nav" style = "display:none;"><a href = "#">Search</a></div>
-				</li>
-				<li>
-				  <div class="nav"><a href = "#">Profile</a></div>
-				</li>
-				<li>
-				<div class="nav"><a href = "#">Dashboard</a></div>
-				</li>
-			</div>
+            <li class="left">
+              <div class="middle"><a href="dashboard.html" class="icono-user"></a></div>
+            </li>
+            <li class="left">
+              <div class="middle"><a href="profile.html" class="icono-gear"></a></div>
+            </li>
+            <li class="left">
+                <div class="middle"><a class="icono-search" href="search.html"></a></div>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
-	<div id = "content">
 
-	<div class = "signInForm">
-							  <section class="container">
-					<div class="login">
-					  <h2>Already signed up? Then <strong>Sign In</strong></h2>
-					  <form method="post" action="index.html">
-						<p><input type="text" name="login" value="" placeholder="Username or Email"></p>
-						<p><input type="password" name="password" value="" placeholder="Password"></p>
-						<p class="remember_me">
-						  <label>
-							<input type="checkbox" name="remember_me" id="remember_me">
-							Remember me on this computer
-						  </label>
-						</p>
-						<p class="submit"><input type="submit" name="commit" value="Sign In"></p>
-					  </form>
-					</div>
+    <div class="site-wrap">
+      <div id = "content">
 
-					<div class="login-help">
-					  <p>Forgot your password? <a href="index.html">Click here to reset it</a>.</p>
-					</div>
-				  </section>
-		</div>
-		<div class = "signInBox"></div>
-	</div>
+      <div class = "signInForm">
+              <div class="login">
+                <h2>Already signed up? Then <strong>Sign In</strong></h2>
+                <form method="post" action="index.html">
+                <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+                <p><input type="password" name="password" value="" placeholder="Password"></p>
+                <p class="remember_me">
+                  <label>
+                  <input type="checkbox" name="remember_me" id="remember_me">
+                  Remember me on this computer
+                  </label>
+                </p>
+                <p class="submit"><input type="submit" name="commit" value="Sign In"></p>
+                </form>
+              </div>
+
+              <div class="login-help">
+                <p>Forgot your password? <a href="index.html">Click here to reset it.</a></p>
+              </div>
+        </div>
+
+<div class="signInBox"></div>
+        <div class = "signUpForm">
+                <div class="login">
+                  <h2>New to [Project]? Then <strong>Sign Up</strong></h2>
+                  <p>below and get ready to access Instagram in style. With saved searches and whatever other awesome features we come up with!</p>
+                  <form method="post" action="index.html">
+                  <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+                  <p><input type="password" name="password" value="" placeholder="Password"></p>
+                  <p><input type="password" name="password" value="" placeholder="Re-Enter Password"></p>
+                  <p class="submit"><input type="submit" name="commit" value="Sign In"></p>
+                  </form>
+                </div>
+        </div>
+<div class="signUpBox"></div>
+
+      </div>
+    </div>
+    <div class="show-for-small">
+      <div class="small-nav">
+        <ul class="right">
+          <li>
+            <div class="middle"><a href="index.html" class="icono-home"></a></div>
+          </li>
+          <li>
+            <div class="middle"><a href="dashboard.html" class="icono-user"></a></div>
+          </li>
+          <li>
+            <div class="middle"><a href="profile.html" class="icono-gear"></a></div>
+          </li>
+          <li><div class="middle"><a class="icono-search" href="search.html"></a></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
   </body>
 </html>
