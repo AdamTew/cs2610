@@ -1,3 +1,211 @@
+@import url("icono.min.css");
+
+/** General **/
+* {
+  -webkit-padding-start: 0;
+}
+
+html, body {
+  background-color: rgba(41, 24, 185, 0.42);;
+  margin:0;
+  padding:0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  display: block;
+  height: 50px;
+}
+
+/** Navigation **/
+nav.top-bar-fixed {
+  position: fixed;
+  width:100%;
+  height: inherit;
+  text-align: center;
+  background-color: #99FCDF;
+  z-index: 2;
+  animation: psychedelic 25s;
+  animation-iteration-count: infinite;
+}
+
+  @keyframes psychedelic
+  {
+    0%   {background: #FC9999;}
+    25%  {background: #F0FC99;}
+    50%  {background: #99C9FC;}
+    75%  {background: #99FCDF;}
+    100% {background: #FC9999;}
+  }
+
+nav.top-bar-fixed > div.container {
+  height: inherit;
+  background-color: transparent;
+}
+
+nav.top-bar-fixed > div > ul {
+  list-style-type: none;
+  height: inherit;
+  width: 50%;
+  margin: 0 auto;
+}
+
+nav.top-bar-fixed > div > ul > li {
+  width: 100px;
+  height: inherit;
+  background-color: #4C96FF;
+  color: white;
+  display: table;
+  border: white solid 1px;
+}
+
+nav.top-bar-fixed a {
+  color: white;
+  text-decoration: none;
+}
+
+nav.top-bar-fixed > div > ul > li:hover {
+  background-color: #0052C5;
+}
+
+nav.top-bar-fixed > div > ul > li:hover a, li:hover a::after {
+  color: #333;
+}
+
+/** Off-canvas-menu for small screens **/
+input.nav-toggle {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  margin: 20px;
+  right: 20px;
+}
+
+label[for="nav-toggle"] {
+  position: fixed;
+  right: 15px;
+  top: 10px;
+  z-index: 3;
+  cursor: pointer;
+  color: #333333;
+}
+
+input.nav-toggle + label, .site-wrap {
+  transition: right 0.5s;
+}
+
+/*input.nav-toggle:checked + label {
+  right: 115px;
+}*/
+
+input.nav-toggle:checked ~ .site-wrap {
+  right: 100px;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+input.nav-toggle:checked ~ .small-nav {
+  left:80%;
+}
+
+div.small-nav {
+  height: 100%;
+  position: fixed;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background: #555555;
+}
+
+div.small-nav > ul {
+  list-style-type: none;
+  width:75px;
+}
+
+div.small-nav > ul > li {
+  margin: 20px;
+}
+
+.site-wrap {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white;
+  position: relative;
+  top: -20px;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.middle {
+  vertical-align: middle;
+  display: table-cell;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+.site-wrap {
+  background-color: transparent;
+}
+
+.wrapper {
+  display: table;
+  height: inherit;
+}
+
+.center {
+  text-align: center;
+}
+
+.show-for-small {
+  display:none;
+}
+
+@media only screen and (max-width: 1079px){
+  html, body {
+    background-color: transparent;
+    margin:0;
+    padding:0;
+  }
+
+  .site-wrap{
+    background-color: #FFFFFF;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .show-for-small {
+    display:block;
+  }
+
+  .hide-for-small {
+    display:none;
+  }
+}
+
 /****************************
 *        Index Page         *
 ****************************/
@@ -11,7 +219,7 @@
 /****************************
 *            Nav            *
 ****************************/
-.top-bar-fixed{
+/*.top-bar-fixed{
 	background-color: #00804e;
 	padding: 0px;
 	height: 85px;
@@ -85,23 +293,23 @@ ul{
 }
 
 #search:-moz-placeholder { /* Firefox 18- */
-   color: #FFF;
+   /*color: #FFF;
 }
 
 #search::-moz-placeholder {  /* Firefox 19+ */
-   color: #FFF;
+   /*color: #FFF;
 }
 
 #search:-ms-input-placeholder {
    color: #FFF;
-}
+/*}*/*/*/*/
 
 /****************************
 *         Content           *
 ****************************/
 #content{
 	width: 1080px;
-	height:1080px;
+	height:906px;
 	margin: 0 auto;
 	background-image: url("../img/bground.jpg");
 	background-color: black;
@@ -117,7 +325,8 @@ ul{
 	z-index: 100;
 }
 
-.signInForm input[type=submit] {
+.signInForm input[type=submit], .signUpForm input[type=submit] {
+display: block;
 	padding:5px 15px;
 	background: #9090e9;
 	width: 140px;
@@ -135,11 +344,11 @@ ul{
 	margin: 0 auto;
 	opacity: .5;
  	background-color: #33364d;
-	margin-top: 10px;
 	z-index: -100;
+	margin-top: -290px;
  }
 
-.signInForm input[type=text], input[type=password] {
+.signInForm input[type=text], .signInForm input[type=password], .signUpForm input[type=text], .signUpForm input[type=password]  {
 	width: 360px;
 	height: 15px;
 	padding: 15px;
@@ -150,7 +359,6 @@ ul{
 
 .signInForm label{
 	font-size: 13px;
-
 }
 
 .login-help{
@@ -161,4 +369,33 @@ ul{
 	font-size: 13px;
 	color: #63b193;
 	text-decoration: none;
+	display: block;
+	text-align: center;
 }
+
+.login-help{
+	text-align: center;
+}
+ .signUpForm{
+ 	padding-top: 50px;
+ 	position: relative;
+ 	width: 375px;
+ 	margin: 0 auto;
+ 	color: #FFF;
+ 	margin-bottom: -270px;
+ 	z-index: 100;
+ }
+
+ .signUpBox{
+ 	width: 500px;
+ 	height: 425px;
+ 	margin: 0 auto;
+ 	opacity: .5;
+  background-color: #9090e9;
+ 	margin-top: -370px;
+ 	z-index: -100;
+  }
+
+	.signInForm h2, .signUpForm h2 {
+		font-weight: normal;
+	}
