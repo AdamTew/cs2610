@@ -13,14 +13,24 @@
 /****************/
 /** 1. Results **/
 /****************/
+
 section.results-pane {
   width: 780px;
+  height: 100vh;
   position: relative;
   margin-top: 20px;
 }
 
+section.results-pane > h3 {
+  margin: 20px;
+  color: #A7A5A5;
+  font-weight: 100;
+  font-family: fantasy;
+}
+
 section.results-pane > ul {
   list-style-type: none;
+  display: none;
 }
 
 section.results-pane > ul > li {
@@ -70,11 +80,37 @@ aside.saved-searches {
 }
 
 aside.saved-searches > div:first-child {
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: rgba(202, 213, 255, 0.41);
   width: inherit;
   height: inherit;
-  border: #333333 solid 1px;
+  border: #ADADAD solid 1px;
   border-radius: 10px;
+}
+
+aside.saved-searches h2 {
+  margin: 20px;
+  color: #A7A5A5;
+  font-weight: 100;
+  font-family: fantasy;
+}
+
+aside.saved-searches div.saved-search {
+  border: #ADADAD solid 1px;
+  border-radius: 5px;
+  padding: 5px;
+  float: left;
+  margin: 0 5px 0 5px;
+  background-color: rgba(241, 164, 161, 0.25);
+  cursor: pointer;
+}
+
+aside.saved-searches div.saved-search:hover {
+  border-width: 2px;
+  background-color: rgba(241, 164, 161, 1);
+}
+
+div.saved-search > p {
+  margin: 0;
 }
 
 /*******************/
