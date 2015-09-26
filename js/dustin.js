@@ -6,7 +6,6 @@ function executeSearch() {
     errorMessage("Please don\'t use # in your search term...");
   }
   else {
-    $("#search-field").removeClass("error");
     hideErrorMessage();
     var noResults = $(".results-pane > h3:first-child");
     var resultsPaneUl = $(".results-pane > ul");
@@ -23,6 +22,7 @@ function errorMessage(msg){
 }
 
 function hideErrorMessage(){
+    $("#search-field").removeClass("error");
     $(".error-message").css("display","none").empty();
 }
 

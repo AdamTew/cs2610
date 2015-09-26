@@ -71,12 +71,13 @@ p.error-message {
   display:none;
   color: red;
   height: 25px;
-  background-color: gainsboro;
+  background-color: #E3E3E3;
   padding: 10px;
   border: grey solid 1px;
   border-left: red solid 5px;
   border-radius: 5px;
   font-family: fantasy;
+  font-size: 1.2em;
 }
 
 .error{
