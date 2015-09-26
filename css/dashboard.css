@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url('https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css');
 @import url("style.css");
+@import url("party.css");
 /********************
 ¡MIXINS
 ********************/
@@ -10,26 +11,25 @@
 
 div.party {
   position: fixed;
-  z-index: 5;
-  /*top: 20px;*/
-  /*visibility: hidden;*/
-  opacity: 0;
-  /*left: 50%;*/
+  z-index: 2;
+  opacity: 1;
   height: 100px;
   width: 1000px;
   background-size: contain;
-  /*background-image: url('../img/disco-ball.jpg');*/
   background-repeat: no-repeat;
 }
 
-div.party-btn {
+div.party-btn > svg {
   position: fixed;
-  opacity: 0;
-  z-index: 6;
+  opacity: 1;
+  z-index: 3;
+  left: 10%;
+  top:-90px;
 }
 
-div.party-btn:hover {
+div.party-btn > svg:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .clear:after, .squeeze:after {
