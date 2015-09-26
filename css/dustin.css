@@ -57,7 +57,7 @@ div.result > figure {
   border-radius: 10px;
 }
 
-div.result a.icono-checkCircle {
+div.result a {
   margin: 10px auto;
   display: inline-block;
   color: #5A00FF;
@@ -65,6 +65,22 @@ div.result a.icono-checkCircle {
 
 div.result a.icono-checkCircle:hover {
   color: #333;
+}
+
+p.error-message {
+  display:none;
+  color: red;
+  height: 25px;
+  background-color: gainsboro;
+  padding: 10px;
+  border: grey solid 1px;
+  border-left: red solid 5px;
+  border-radius: 5px;
+  font-family: fantasy;
+}
+
+.error{
+  border:red solid 2px !important;
 }
 
 /***********************/
