@@ -19,7 +19,7 @@ div.party {
   background-repeat: no-repeat;
 }
 
-div.party-btn > svg {
+div.party-btn {
   position: fixed;
   opacity: 1;
   z-index: 3;
@@ -27,7 +27,7 @@ div.party-btn > svg {
   top:-90px;
 }
 
-div.party-btn > svg:hover {
+#party-btn:hover {
   opacity: 1;
   cursor: pointer;
 }

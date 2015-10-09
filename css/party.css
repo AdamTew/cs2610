@@ -15,27 +15,24 @@
 
 	transform-origin: 500px 500px;
 	-webkit-animation: spin-shadow 2s infinite;
-	animation: spin-shadow 2s infinite;
-	-webkit-animation-timing-function: linear;
-	animation-timing-function: linear;
 	animation-direction: forwards;
 }
 
 @-moz-keyframes spin-shadow {
 	from {}
-	to { transform: translate(-1300px);
+	to { transform: translate(-1300px); opacity: 0;
 	-webkit-transform: translate(-1300px);}
 }
 
 @-webkit-keyframes spin-shadow {
 	from {}
-	to { transform: translate(-1300px);
+	to { transform: translate(-1300px); opacity: 0;
 	-webkit-transform: translate(-1300px);}
 }
 
 @keyframes spin-shadow {
 	from {}
-	to { transform: translate(-1300px);
+	to { transform: translate(-1300px); opacity: 0;
 	-webkit-transform: translate(-1300px);}
 }
 
