@@ -1,0 +1,25 @@
+{
+  "name": "steve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-generator": "^4.13.1",
+    "nodemon": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamTew/cs2610.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamTew/cs2610/issues"
+  },
+  "homepage": "https://github.com/AdamTew/cs2610#readme"
+}
