@@ -1,0 +1,147 @@
+@charset "UTF-8";
+@import url('https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css');
+@import url("style.css");
+@import url("party.css");
+/********************
+¡MIXINS
+********************/
+/********************
+¡CLASSES
+********************/
+
+div.party {
+  position: fixed;
+  z-index: 2;
+  opacity: 0;
+  height: 100px;
+  width: 1000px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+div.party-btn {
+  position: fixed;
+  opacity: 1;
+  z-index: 3;
+  left: 10%;
+  top:-90px;
+}
+
+#party-btn:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.clear:after, .squeeze:after {
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+}
+
+.squeeze {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/**
+* Floats  
+*/
+.none {
+  float: none !important;
+}
+
+.pull--right {
+  float: right !important;
+}
+
+.pull--left {
+  float: left !important;
+}
+
+.clear {
+  display: block;
+  float: none;
+  clear: both;
+}
+
+/*------------------------------------*\
+              ¡BUTTONS
+\*------------------------------------*/
+.btn {
+  background: #FFF;
+  border: solid 1px #CCC;
+  height: 25px;
+  text-align: center;
+  width: 75px;
+}
+/*------------------------------------*\
+              ¡GENERAL
+\*------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -100px;
+  min-height: 100%;
+  position: relative;
+}
+
+/*------------------------------------*\
+                ¡BOX
+\*------------------------------------*/
+.box-wrap {
+  margin: 50px 0;
+}
+
+.box {
+  width: 32%;
+  border: solid 1px #CCC;
+  float: left;
+  padding: 5px;
+}
+  .box:nth-child(n) {
+    margin-bottom: 2%;
+    margin-right: 2%;
+  }
+  .box:nth-child(3n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .box img {
+    display: block;
+    margin: 0 0 10px;
+    width: 100%;
+  }
+/*------------------------------------*\
+                ¡FOOTER
+\*------------------------------------*/
+.push
+footer {
+  height: 100px;
+}
+
+footer {
+  border-top: solid 1px #CCC;
+  padding: 10px 0;
+}

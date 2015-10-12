@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Search Results</title>
+    <meta name="charset" content="utf-8">
+    <meta name="description" content="CS2610 Project">
+    <link rel="stylesheet" type="text/css" href="css/dustin.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle show-for-small" />
+    <label for="nav-toggle" class="icono-hamburger show-for-small"></label>
+    <header>
+      <nav class="top-bar-fixed">
+        <div class="container hide-for-small">
+          <ul class="center">
+            <li class="left">
+              <a href="index.html">
+                <div class="middle nav-item">
+                  <div class="icono-home"></div>
+                </div>
+              </a>
+            </li>
+            <li class="left">
+              <a href="dashboard.html">
+                <div class="middle nav-item">
+                  <div class="icono-user"></div>
+                </div>
+              </a>
+            </li>
+            <li class="left">
+              <a href="profile.html">
+                <div class="middle nav-item">
+                  <div class="icono-gear"></div>
+                </div>
+              </a>
+            </li>
+            <li class="left">
+                <a href="search.html">
+                  <div class="middle nav-item">
+                    <div class="icono-search"></div>
+                  </div>
+                </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="site-wrap">
+      <div class="container">
+        <div class="search center">
+          <div class="wrapper">
+            <p class="error-message"></p>
+            <input id="search-field" type="text" name="search" placeholder="Search...">
+            <div class="go-button" onclick="executeSearch();">
+                Go
+            </div>
+          </div>
+        </div>
+        <section class="results-pane left">
+          <h3>No results...</h3>
+          <aside class="saved-searches">
+            <div class="center">
+              <h2>Saved Searches <hr></h2>
+              <div class="saved-search">
+                <p>#awesome</p>
+              </div>
+            </div>
+          </aside>
+          <ul>
+            <li>
+              <div class="result">
+                <figure>
+                  <img src="img/placeholder.jpg" alt="Test 1">
+                </figure>
+                <div class="center">
+                  <div><a href="#" class="like icono-checkCircle"></a></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="result">
+                <figure>
+                  <img src="img/placeholder.jpg" alt="Test 2">
+                </figure>
+                <div class="center">
+                  <div><a href="javascript:like();" class="like icono-checkCircle"></a></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="result">
+                <figure>
+                  <img src="img/placeholder.jpg" alt="Test 3">
+                </figure>
+                <div class="center">
+                  <div><a href="#" class="like icono-checkCircle"></a></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="result">
+                <figure>
+                  <img src="img/placeholder.jpg" alt="Test 4">
+                </figure>
+                <div class="center">
+                  <div><a href="#" class="like icono-checkCircle"></a></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="result">
+                <figure>
+                  <img src="img/placeholder.jpg" alt="Test 5">
+                </figure>
+                <div class="center">
+                  <div><a href="#" class="like icono-checkCircle"></a></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <div class="show-for-small">
+      <div class="small-nav">
+        <ul class="right">
+          <li>
+            <div class="middle"><a href="index.html" class="icono-home"></a></div>
+          </li>
+          <li>
+            <div class="middle"><a href="dashboard.html" class="icono-user"></a></div>
+          </li>
+          <li>
+            <div class="middle"><a href="profile.html" class="icono-gear"></a></div>
+          </li>
+          <li><div class="middle"><a class="icono-search" href="search.html"></a></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/dustin.js"></script>
+  </body>
+</html>
