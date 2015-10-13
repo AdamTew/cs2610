@@ -16,21 +16,20 @@
 
 section.results-pane {
   width: 780px;
-  height: 100vh;
   position: relative;
   margin-top: 20px;
 }
 
-section.results-pane > h3 {
+section.results-pane .no-results {
   margin: 20px;
   color: #A7A5A5;
   font-weight: 100;
   font-family: fantasy;
+  height:100vh;
 }
 
 section.results-pane > ul {
   list-style-type: none;
-  display: none;
 }
 
 section.results-pane > ul > li {
@@ -71,13 +70,14 @@ p.error-message {
   display:none;
   color: red;
   height: 25px;
-  background-color: #E3E3E3;
   padding: 10px;
   border: grey solid 1px;
   border-left: red solid 5px;
   border-radius: 5px;
   font-family: fantasy;
   font-size: 1.2em;
+  margin: 10px;
+  box-shadow: 3px 3px 3px #ddd;
 }
 
 .error{
@@ -116,7 +116,7 @@ aside.saved-searches div.saved-search {
   border-radius: 5px;
   padding: 5px;
   float: left;
-  margin: 0 5px 0 5px;
+  margin: 5px;
   background-color: rgba(241, 164, 161, 0.25);
   cursor: pointer;
 }
