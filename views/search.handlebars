@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="search center">
+    <div class="wrapper">
+      <p class="error-message"></p>
+      <input id="search-field" type="text" name="search" placeholder="Search...">
+      <div class="go-button" onclick="executeSearch();">
+          Go
+      </div>
+    </div>
+  </div>
+  <section class="results-pane left">
+    <aside class="saved-searches">
+      <div class="center">
+        <h2>Saved Searches <hr></h2>
+        {{#each saved}}
+        {{>savedsearch search=this}}
+        {{/each}}
+      </div>
+    </aside>
+    <ul>
+      {{#if results.length}}
+      {{#each results}}
+      <li>
+        {{>searchresult img=this}}
+      </li>
+      {{/each}}
+      {{else}}
+      <h3 class="no-result">No Results</h3>
+      {{/if}}
+    </ul>
+  </section>
+</div>

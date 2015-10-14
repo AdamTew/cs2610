@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta name="charset" content="utf-8">
+    <meta name="description" content="CS2610 Project">
+    <link rel="stylesheet" type="text/css" href="/css/jeff.css">
+    <link rel="stylesheet" type="text/css" href="/css/dustin.css">
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle show-for-small" />
+    <label for="nav-toggle" class="icono-hamburger show-for-small"></label>
+    <header>
+      {{>menu}}
+    </header>
+
+    <div class="site-wrap">
+      {{{body}}}
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/dustin.js"></script>
+  </body>
+</html>
