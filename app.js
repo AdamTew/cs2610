@@ -1,7 +1,8 @@
-var express = require('express');var express 	= require('express')
-	, exphbs		= require('express-handlebars')
-  , port      = 3000
-  , path      = require('path')
+var express 	= require('express');
+var express 	= require('express')
+	, exphbs	= require('express-handlebars')
+  	, port      = 3000
+  	, path      = require('path')
 	, router 	= express.Router()
 	, userRoutes = require('./routes/userRoutes.js')
 
@@ -12,7 +13,7 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', userRoutes)
+app.use('/users', userRoutes)
 
 app.listen(port)
 

@@ -3,7 +3,13 @@ var express = require('express')
   , results = require('../results.json');
 
   router.get('/', function(req,res){
-    res.render('index', {
+    res.render('dashboard', {
+      title: "Welcome | Login"
+    })
+  })
+
+  router.get('/dashboard', function(req,res){
+    res.render('dashboard', {
       title: "Welcome | Login"
     })
   })
