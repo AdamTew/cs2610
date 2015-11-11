@@ -8,12 +8,6 @@ var express = require('express')
     })
   })
 
-  router.get('/dashboard', function(req,res){
-    res.render('dashboard', {
-      title: "Welcome | Login"
-    })
-  })
-
   router.get('/search', function(req,res){
     res.render('search', {
       results : results,
