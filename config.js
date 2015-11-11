@@ -1,7 +1,11 @@
 var config = {}
 
+<<<<<<< HEAD
+module.exports = config;
+=======
 config.client_id = 'a15d637121c1465c8cb5c392077e6c90'
 config.client_secret = 'b597d5a69b864894a6f5f1a86c736e55'
 config.redirect_uri = 'http://localhost:3000/auth'
 
 module.exports = config
+>>>>>>> 8a68ae3d19e70b049226ada9ed03ed947801a7e9
