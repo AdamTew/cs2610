@@ -6,7 +6,8 @@
   "dependencies": {
     "express": "^4.13.3",
     "express-generator": "^4.13.1",
-    "nodemon": "^1.7.1"
+    "nodemon": "^1.7.1",
+    "express-handlebars": "~2.0.1"
   },
   "devDependencies": {},
   "scripts": {

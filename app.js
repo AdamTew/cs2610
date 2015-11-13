@@ -13,13 +13,13 @@ var express 	= require('express')
 
 var app = express();
 
-app.engine('handlebars', exphbs({defaultLayout: 'base'}));
+app.engine('handlebars', exphbs({defaultLayout: 'auth-base'}));
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res){
-	
+
 	var post_data = {
 		client_id: cfg.client_id,
 		client_secret: cfg.client_secret,

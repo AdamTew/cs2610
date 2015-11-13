@@ -2,10 +2,10 @@
   <div class="search center">
     <div class="wrapper">
       <p class="error-message"></p>
-      <input id="search-field" type="text" name="search" placeholder="Search...">
-      <div class="go-button" onclick="executeSearch();">
-          Go
-      </div>
+      <form id="searchform" method="post" action="/users/search">
+        <input id="search-field" type="text" name="search" placeholder="Search...">
+        <input class="go-button" type="submit" value="Go">
+      </form>
     </div>
   </div>
   <section class="results-pane left">
@@ -21,7 +21,7 @@
       {{#if results.length}}
       {{#each results}}
       <li>
-        {{>searchresult img=this}}
+        {{>searchresult img=this.images.standard_resolution.url alt=this.user.username}}
       </li>
       {{/each}}
       {{else}}
