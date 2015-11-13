@@ -36,9 +36,6 @@ app.use(session({
 
 
 app.get('/', function(req, res){
-<<<<<<< HEAD
-
-=======
 	res.render('login')
 	// var post_data = {
 	// 	client_id: cfg.client_id,
@@ -81,7 +78,7 @@ app.get('/authorize', function(req, res) {
 })
 
 app.get('/auth', function(req,res){
->>>>>>> 6d73348edc05b093e9ad44f1ea80037fb91ea730
+
 	var post_data = {
 		client_id: cfg.client_id,
 		client_secret: cfg.client_secret,
