@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Dashboard</title>
 	<link href="public/css/dashboard.css" rel="stylesheet" type="text/css">
-	
+
 </head>
 <body>
 	<div class="party-btn not-animated">
@@ -36,7 +36,7 @@
 					<stop id="stop5894" stop-opacity="0" offset="1"/>
 				</radialGradient>
 			</defs>
-			
+
 			<g>
 				<circle class="light-shadow spin-shadow nine" cx="1250" cy="200" r="50" /	>
 			</g>
@@ -139,27 +139,9 @@
 			<div class="squeeze">
 				<!-- <img style="display:block; margin: 20px auto;" src="/img/css.gif" /> -->
 				<div class="box-wrap lk-clear">
-					<div class="box">
-						<img src="http://placehold.it/300x200" />
-						<div class="group-btn lk-clear">
-							<button class="btn accent-1 pull--left">Love it!</button>
-							<button class="btn accent-1 pull--right">Hate it!</button>
-						</div>
-					</div>
-					<div class="box">
-						<img src="http://placehold.it/300x200" />
-						<div class="group-btn lk-clear">
-							<button class="btn accent-1 pull--left">Love it!</button>
-							<button class="btn accent-1 pull--right">Hate it!</button>
-						</div>
-					</div>
-					<div class="box">
-						<img src="http://placehold.it/300x200" />
-						<div class="group-btn lk-clear">
-							<button class="btn accent-1 pull--left">Love it!</button>
-							<button class="btn accent-1 pull--right">Hate it!</button>
-						</div>
-					</div>
+					{{#each feedlist}}
+					{{>feed item=this}}
+					{{/each}}
 				</div>
 			</div>
 		</div>
