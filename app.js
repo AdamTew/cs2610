@@ -78,10 +78,6 @@ app.get('/authorize', function(req, res) {
 })
 
 app.get('/auth', function(req,res){
-<<<<<<< HEAD
-=======
-
->>>>>>> f559b468524a8f693917653e003cc0ef9dbde3e6
 	var post_data = {
 		client_id: cfg.client_id,
 		client_secret: cfg.client_secret,
