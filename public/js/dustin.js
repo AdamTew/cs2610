@@ -29,11 +29,9 @@ function likeListener() {
     if(myClass.indexOf("icono-checkCircle") >= 0){
       $(this).removeClass("icono-checkCircle");
       $(this).addClass("icono-smile");
-      sendLikeToInsta();
     } else {
         $(this).removeClass("icono-smile");
         $(this).addClass("icono-checkCircle");
-        sendUnLikeToInsta();
     }
   });
 }
@@ -52,14 +50,6 @@ function savedSearchesDismissListener(){
     $(".saved-searches").css("right", "-300px")
     $(".saved-searches-slider").css("right", "0px")
   })
-}
-
-function sendLikeToInsta(){
-
-}
-
-function sendUnLikeToInsta(){
-
 }
 
 function savedSearchListener() {

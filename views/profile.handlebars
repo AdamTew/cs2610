@@ -1,81 +1,10 @@
-<!doctype html>
-<html>
-  <head>
-    <title>User Profile</title>
-    <meta name="charset" content="utf-8">
-    <meta name="description" content="CS2610 Project">
-    <link rel="stylesheet" type="text/css" href="../public/css/devan.css">
-  </head>
-  <body>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle show-for-small" />
-    <label for="nav-toggle" class="icono-hamburger show-for-small"></label>
-    <header>
-      <nav class="top-bar-fixed">
-        <div class="container hide-for-small">
-          <ul class="center">
-            <li class="left">
-              <a href="index.html">
-                <div class="middle nav-item">
-                  <div class="icono-home"></div>
-                </div>
-              </a>
-            </li>
-            <li class="left">
-              <a href="dashboard.html">
-                <div class="middle nav-item">
-                  <div class="icono-user"></div>
-                </div>
-              </a>
-            </li>
-            <li class="left">
-              <a href="profile.html">
-                <div class="middle nav-item">
-                  <div class="icono-gear"></div>
-                </div>
-              </a>
-            </li>
-            <li class="left">
-                <a href="search.html">
-                  <div class="middle nav-item">
-                    <div class="icono-search"></div>
-                  </div>
-                </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <div class="site-wrap">
       <div class="container center">
         <div class="Profile Box">
-          <p>
-          <img src="http://placehold.it/350x350" alt="profile image"><br>
-          <h1>Welcome [USERNAME]</h1>
-          <form><h2>
-            Name:<input type="text" name="Name"><br>
-            Email:<input type="text" name="Email"><br>
-            Bio:<input type="text" name="Bio"><br>
-            <input type="submit" value="Submit">
-          </h2>
+          <img src="{{user.profile_picture}}" alt="{{user.full_name}}"><br>
+          <h1>Welcome {{user.username}}</h1>
+          <h2>Name: {{user.full_name}}</h2>
+          <h2>Website: {{user.website}}</h2>
+          <h2>Bio: {{user.bio}}</h2>
         </div>
       </div>
     </div>
-    <div class="show-for-small">
-      <div class="small-nav">
-        <ul class="right">
-          <li>
-            <div class="middle"><a href="index.html" class="icono-home"></a></div>
-          </li>
-          <li>
-            <div class="middle"><a href="dashboard.html" class="icono-user"></a></div>
-          </li>
-          <li>
-            <div class="middle"><a href="profile.html" class="icono-gear"></a></div>
-          </li>
-          <li><div class="middle"><a class="icono-search" href="search.html"></a></div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </body>
-</html>

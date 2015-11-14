@@ -1,17 +1,46 @@
 var express = require('express')
   , router = express.Router()
-  , results = require('../results.json')
+  , querystring = require('querystring')
   , request = require('request')
 
   router.get('/', function(req,res){
-    res.render('dashboard', {
-      title: "Welcome | Login"
+    res.redirect('/users/dashboard')
+  })
+
+  router.get('/dashboard', function(req,res){
+    var options = {
+      url: 'https://api.instagram.com/v1/users/self/feed?access_token=' + req.session.access_token
+    }
+    request(options, function(error, response, body){
+      if(response.statusCode == "404" || response.statusCode == "400"){
+        res.redirect('../')
+      } else {
+        body = JSON.parse(body)
+        res.render('dashboard', {
+            title: "Welcome | Login",
+            feedlist: body.data
+        })
+      }
+    })
+
+
+  })
+
+  router.get('/profile',function(req,res){
+    var options = {
+      url: 'https://api.instagram.com/v1/users/self/?access_token=' + req.session.access_token
+    }
+
+    request(options, function(error, response, body){
+      body = JSON.parse(body)
+      var data = body.data
+      res.render('profile', {
+        user: data,
+      })
     })
   })
 
   router.get('/search', function(req,res){
-    var ACCESS_TOKEN = "";
-
     res.render('search', {
       results : [],
       saved: [],
@@ -25,25 +54,19 @@ var express = require('express')
     }
 
     request(options, function(error, response, body){
-      console.log('statusCode ' + response.statusCode)
-      if(response.statusCode == "404" || response.statusCode == "400"){
-        res.redirect('../')
-      } else {
-        body = JSON.parse(body)
-        var data = body.data
-        console.log('data ' + data)
-        res.render('search',{
-          results: data,
-          saved: [],
-          query: req.body.search,
-          helpers: {
-            hasLiked: function(liked){
-              if(liked){return 'icono-smile'}
-              return 'icono-checkCircle'
-            }
+      body = JSON.parse(body)
+      var data = body.data
+      res.render('search',{
+        results: data,
+        saved: [],
+        query: req.body.search,
+        helpers: {
+          hasLiked: function(liked){
+            if(liked){return 'icono-smile'}
+            return 'icono-checkCircle'
           }
-        })
-      }
+        }
+      })
     })
   })
 

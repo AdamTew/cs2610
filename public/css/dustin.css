@@ -13,9 +13,9 @@
 /****************/
 
 section.results-pane {
-  width: 780px;
+  width: 100%;
   position: relative;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 section.results-pane .no-results {
@@ -98,6 +98,7 @@ aside.saved-searches-slider {
   border-bottom-left-radius: 5px;
   text-align: center;
   transition: right .5s;
+  z-index: 6;
 }
 
 aside.saved-searches-slider > p {
@@ -123,6 +124,7 @@ aside.saved-searches {
   right: -300px;
   margin: 20px;
   transition: right 1.5s;
+  z-index: 5;
 }
 
 aside.saved-searches > p.dismiss {
