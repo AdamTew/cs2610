@@ -11,6 +11,7 @@ var express 	= require('express')
 	, session = require('express-session')
 	, request = require('request')
 	, querystring = require('querystring')
+	, bodyParser = require('body-parser')
 
 
 
@@ -22,6 +23,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'auth-base'}));
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({extended: false}))
 
 /*
 	Middlewares
@@ -59,7 +61,7 @@ app.get('/', function(req, res){
 	// })
 })
 
-app.get('/authorize', function(req, res) {
+app.post('/authorize', function(req, res) {
 	// if(req.query.error == 'access_denied'){
 	// 	return res.redirect('/')
 	// }

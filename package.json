@@ -4,6 +4,7 @@
   "description": "Our awesome app!",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "express-generator": "^4.13.1",
     "express-handlebars": "~2.0.1",

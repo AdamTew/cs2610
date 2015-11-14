@@ -20,14 +20,17 @@ var express = require('express')
   })
 
   router.post('/search', function(req,res){
-    var ACCESS_TOKEN = "2236396886.1677ed0.54863aa09137410c8896670da0b347ed"
+    console.log("req.body.search " + req.body.search)
     var options = {
-      url: 'https://api.instagram.com/v1/tags/'+ req.search +'/media/recent?access_token=' + ACCESS_TOKEN
+      url: 'https://api.instagram.com/v1/tags/'+ req.body.search +'/media/recent?access_token=' + req.session.access_token
     }
 
     request(options, function(error, response, body){
+
+      console.log('body ' +body)
+      body = JSON.parse(body)
       var data = body.data
-      console.log("body.data " + body.data)
+      console.log('data ' + data)
       res.render('search',{
         results: data,
         saved: []

@@ -14,6 +14,7 @@ router.get('/dashboard', function(req,res){
     url: url
   }
   request(options, function(error, response, body){
+    body = JSON.parse(body)
     res.render('dashboard', {
         title: "Welcome | Login",
         feedlist: body.data
