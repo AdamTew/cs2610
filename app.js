@@ -36,10 +36,8 @@ app.use(session({
 
 app.use(function (req, res, next) {
 		if(req.originalUrl.substring(0,5) == '/auth' || req.originalUrl.substring(0,10) == '/authorize' || req.originalUrl == '/'){
-			console.log('next ' + req.originalUrl)
 			next()
 		} else if(typeof req.session.access_token === 'undefined'){
-			console.log('req.session.access_token ' + req.session.access_token)
 			res.redirect('/')
 		} else if(req.session.access_token) {
 			var options = {
@@ -52,8 +50,6 @@ app.use(function (req, res, next) {
 				next();
 			})
 		} else {
-			console.log('url ' + req.originalUrl)
-			console.log('req.session.access_token ' + req.session.access_token);
 			next()
 		}
 })
