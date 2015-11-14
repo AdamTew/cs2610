@@ -3,12 +3,15 @@
     <div class="wrapper">
       <p class="error-message"></p>
       <form id="searchform" method="post" action="/users/search">
-        <input id="search-field" type="text" name="search" placeholder="Search...">
-        <input class="go-button" type="submit" value="Go">
+        <input id="search-field" type="text" name="search" placeholder="Search..." value="{{query}}">
+        <div class="go-button" onclick="executeSearch()">Go</div>
       </form>
     </div>
   </div>
   <section class="results-pane left">
+    <aside class="saved-searches-slider">
+      <p>Saved Searches</p>
+    </aside>
     <aside class="saved-searches">
       <div class="center">
         <h2>Saved Searches <hr></h2>
@@ -16,12 +19,13 @@
         {{>savedsearch search=this}}
         {{/each}}
       </div>
+        <p class="dismiss">X</p>
     </aside>
     <ul>
       {{#if results.length}}
       {{#each results}}
       <li>
-        {{>searchresult url=this.images.standard_resolution.url alt=this.user.username}}
+        {{>searchresult url=this.images.standard_resolution.url alt=this.caption.text liked=this.user_has_liked}}
       </li>
       {{/each}}
       {{else}}

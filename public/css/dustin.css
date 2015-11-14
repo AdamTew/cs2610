@@ -35,8 +35,8 @@ section.results-pane > ul > li {
 }
 
 section.results-pane > ul > li > div.result {
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 725px;
   position: relative;
   margin: 0 auto;
   background-color: rgba(0, 53, 255, 0.21);
@@ -46,12 +46,14 @@ section.results-pane > ul > li > div.result {
 }
 
 div.result > figure {
-  width: 550px;
-  height: 550px;
+  width: 640px;
+  height: 640px;
   overflow: hidden;
   margin: 10px auto;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   border-radius: 10px;
+  background-color: white;
+  text-align: center;
 }
 
 div.result a {
@@ -85,17 +87,54 @@ p.error-message {
 /***********************/
 /** 2. Saved Searches **/
 /***********************/
+aside.saved-searches-slider {
+  width: 50px;
+  height: 240px;
+  position: fixed;
+  right: 0px;
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  background-color: rgba(0, 0, 255, 0.39);
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  transition: right .5s;
+}
+
+aside.saved-searches-slider > p {
+  color: white;
+  transform: rotate(270deg);
+  float: left;
+  top: 220px;
+  right: -20px;
+  width: 200px;
+  height: 50px;
+  position: relative;
+  transform-origin: left top 0;
+}
+
+aside.saved-searches-slider > p:hover {
+  font-weight: bold;
+}
+
 aside.saved-searches {
   width: 240px;
   height: 240px;
   position: fixed;
-  left: 70%;
+  right: -300px;
   margin: 20px;
-  transform: translateX(-35%);
+  transition: right 1.5s;
+}
+
+aside.saved-searches > p.dismiss {
+  position: relative;
+  top: -230px;
+  left: 215px;
+  color: grey;
+  cursor: pointer;
 }
 
 aside.saved-searches > div:first-child {
-  background-color: rgba(202, 213, 255, 0.41);
+  background-color: rgb(187, 221, 213);
   width: inherit;
   height: inherit;
   border: #ADADAD solid 1px;

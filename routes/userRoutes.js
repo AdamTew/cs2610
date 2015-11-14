@@ -15,26 +15,35 @@ var express = require('express')
     res.render('search', {
       results : [],
       saved: [],
-      layout: "auth-base.handlebars"
+      query: ''
     })
   })
 
   router.post('/search', function(req,res){
-    console.log("req.body.search " + req.body.search)
     var options = {
       url: 'https://api.instagram.com/v1/tags/'+ req.body.search +'/media/recent?access_token=' + req.session.access_token
     }
 
     request(options, function(error, response, body){
-
-      console.log('body ' +body)
-      body = JSON.parse(body)
-      var data = body.data
-      console.log('data ' + data)
-      res.render('search',{
-        results: data,
-        saved: []
-      })
+      console.log('statusCode ' + response.statusCode)
+      if(response.statusCode == "404" || response.statusCode == "400"){
+        res.redirect('../')
+      } else {
+        body = JSON.parse(body)
+        var data = body.data
+        console.log('data ' + data)
+        res.render('search',{
+          results: data,
+          saved: [],
+          query: req.body.search,
+          helpers: {
+            hasLiked: function(liked){
+              if(liked){return 'icono-smile'}
+              return 'icono-checkCircle'
+            }
+          }
+        })
+      }
     })
   })
 
