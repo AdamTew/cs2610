@@ -1,33 +1,31 @@
-var express 	= require('express');
-var express 	= require('express')
-	, exphbs	= require('express-handlebars')
-  	, port      = 3000
-  	, path      = require('path')
-	, router 	= express.Router()
-	, userRoutes = require('./routes/userRoutes.js')
-	// Include all individual routes
-	, dashRoute = require('./routes/dashRoute.js')
-	, cfg = require('./config')
-	, session = require('express-session')
-	, request = require('request')
+var express 	  = require('express')
+	, exphbs	    = require('express-handlebars')
+  , port        = 3000
+  , path        = require('path')
+	, router 	    = express.Router()
+	, userRoutes  = require('./routes/userRoutes.js')
+	, cfg         = require('./config')
+	, session     = require('express-session')
+	, request     = require('request')
 	, querystring = require('querystring')
-	, bodyParser = require('body-parser')
+	, bodyParser  = require('body-parser')
 
 
 
 var access_token = ''
 
-var app = express();
+var app = express()
 
-app.engine('handlebars', exphbs({defaultLayout: 'auth-base'}));
-app.set('view engine', 'handlebars');
-
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({extended: false}))
+app.engine('handlebars', exphbs({defaultLayout: 'auth-base'}))
+app.set('view engine', 'handlebars')
 
 /*
 	Middlewares
 */
+
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
 
 app.use(session({
 	cookieName: 'session',
@@ -37,37 +35,33 @@ app.use(session({
 }))
 
 app.use(function (req, res, next) {
-	if(req.originalUrl.substring(0,5) == '/auth'){
-		next();
-	}
-  else if(typeof req.session.access_token === 'undefined'){
-		var qs = {
-			client_id: cfg.client_id,
-			redirect_uri: cfg.redirect_uri,
-			response_type: 'code'
+		if(req.originalUrl.substring(0,5) == '/auth' || req.originalUrl.substring(0,10) == '/authorize' || req.originalUrl == '/'){
+			console.log('next ' + req.originalUrl)
+			next()
+		} else if(typeof req.session.access_token === 'undefined'){
+			console.log('req.session.access_token ' + req.session.access_token)
+			res.redirect('/')
+		} else if(req.session.access_token) {
+			var options = {
+				url: 'https://api.instagram.com/v1/users/self/?access_token=' + req.session.access_token
+			}
+
+			request(options, function(error, response, body){
+				body = JSON.parse(body)
+				if(body.meta.error_message) {res.redirect('/')}
+				next();
+			})
+		} else {
+			console.log('url ' + req.originalUrl)
+			console.log('req.session.access_token ' + req.session.access_token);
+			next()
 		}
-
-		var query = querystring.stringify(qs)
-
-		var url = 'https://api.instagram.com/oauth/authorize/?' + query
-
-		res.redirect(url)
-	} else {
-		var options = {
-      url: 'https://api.instagram.com/v1/users/self/feed?access_token=' + req.session.access_token
-    }
-    request(options, function(error, response, body){
-      if(response.statusCode == "404" || response.statusCode == "400"){
-        res.redirect('../')
-      } else {
-        next();
-      }
-    })
-	}
 })
 
 app.get('/', function(req, res){
-		res.render('login')
+		res.render('login', {
+			layout: 'base'
+		})
 })
 
 app.post('/authorize', function(req, res) {
@@ -103,16 +97,19 @@ app.get('/auth', function(req,res){
 	}
 
 	request.post(options, function(error, response, body) {
-		var data = JSON.parse(body)
-		req.session.access_token = data.access_token
+		body = JSON.parse(body)
+		req.session.access_token = body.access_token
 		res.redirect('/users/dashboard')
 	})
 })
 
-
+app.get('/logout', function(req,res){
+	req.session.destroy()
+	res.redirect('/')
+})
 
 app.use('/users', userRoutes)
 
 app.listen(port)
 
-console.log('Server running at http:127.0.0.1:' + port + '/')
+console.log('Server running at http://localhost:' + port + '/')
