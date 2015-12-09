@@ -9,8 +9,9 @@ var express 	  = require('express')
 	, request     = require('request')
 	, querystring = require('querystring')
 	, bodyParser  = require('body-parser')
+  , db          = require('./db')
 
-
+var dburl = "mongodb://admin:JoeSmith1820!!@ds053784.mongolab.com:53784/heroku_k9643vx1"
 
 var access_token = ''
 
@@ -95,6 +96,7 @@ app.get('/auth', function(req,res){
 	request.post(options, function(error, response, body) {
 		body = JSON.parse(body)
 		req.session.access_token = body.access_token
+		req.session.userid = body.user.id
 		res.redirect('/users/dashboard')
 	})
 })
@@ -106,6 +108,13 @@ app.get('/logout', function(req,res){
 
 app.use('/users', userRoutes)
 
-app.listen(port)
-
-console.log('Server running at http://localhost:' + port + '/')
+db.connect(dburl, function(err) {
+  if (err) {
+    console.log('Unable to connect to Mongo.')
+    process.exit(1)
+  } else {
+    app.listen(port, function() {
+      console.log('Server running at http://localhost:' + port + '/')
+    })
+  }
+})

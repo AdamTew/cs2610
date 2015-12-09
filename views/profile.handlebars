@@ -1,10 +1,16 @@
       <div class="container center">
         <div class="Profile Box">
-          <img src="{{user.profile_picture}}" alt="{{user.full_name}}"><br>
-          <h1>Welcome {{user.username}}</h1>
-          <h2>Name: {{user.full_name}}</h2>
-          <h2>Website: {{user.website}}</h2>
-          <h2>Bio: {{user.bio}}</h2>
+          <form id="userprofile" method="post" action="/users/profile">
+            <img src="{{user.profile_picture}}" alt="{{user.full_name}}"><br>
+            <label>Welcome: </label><input type="text" name="username" value="{{user.username}}">
+            <br><br><label>Name: </label><input type="text" name='full_name' value="{{user.full_name}}">
+            <br><br><label>Website: </label><input type="text" name="website" value="{{user.website}}">
+            <br><br><label>Bio: </label><textarea rows="4" cols="50" name="bio" form="userprofile">{{user.bio}}</textarea>
+            <input type="hidden" name="id" value="{{user.id}}" >
+            <br>
+            <input type="hidden" name="profile_picture" value="{{user.profile_picture}}">
+            <input type="submit" value="Update">
+          </form>
         </div>
       </div>
     </div>

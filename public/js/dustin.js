@@ -12,6 +12,28 @@ function executeSearch() {
   }
 }
 
+function saveSearch(){
+  if($("#search-field").val() == ""){
+    return;
+  }else if($("#search-field").val().indexOf("#") >= 0){
+    errorMessage("Please don\'t use # in your search term...");
+  }else{
+    hideErrorMessage();
+    var search = $("#search-field").val()
+    var f = document.createElement("form");
+    f.setAttribute('method',"post");
+    f.setAttribute('action',"/users/savesearch");
+
+    var i = document.createElement("input"); //input element, text
+    i.setAttribute('type',"text");
+    i.setAttribute('name',"search");
+    i.setAttribute('value', search);
+
+    f.appendChild(i);
+    f.submit();
+  }
+}
+
 function errorMessage(msg){
   $("#search-field").addClass("error");
   $(".error-message").css("display","inherit").text(msg);

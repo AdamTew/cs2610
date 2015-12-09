@@ -9,6 +9,7 @@
     "express-generator": "^4.13.1",
     "express-handlebars": "~2.0.1",
     "express-session": "^1.12.1",
+    "mongodb": "^2.1.0",
     "nodemon": "^1.7.1",
     "request": "^2.65.0"
   },

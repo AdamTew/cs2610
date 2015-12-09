@@ -223,6 +223,26 @@ div.small-nav > ul > li {
   display:none;
 }
 
+#userprofile {
+  padding: 50px;
+}
+
+#userprofile > input[type="text"], #userprofile > textarea {
+  font-size: 1.5em;
+  border: 1px solid #eee;
+  padding: 5px;
+}
+
+#userprofile > input[type="submit"] {
+  font-size: 1.5em;
+  position:relative;
+  padding:10px;
+  border: 2px solid blue;
+  background: none;
+  color: blue;
+  margin-top: 20px;
+}
+
 /******************************/
 /** 5. Media query targeting **/
 /** medium to small screens  **/
