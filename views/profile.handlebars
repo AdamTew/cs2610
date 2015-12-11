@@ -8,6 +8,7 @@
             <br><br><label>Bio: </label><textarea rows="4" cols="50" name="bio" form="userprofile">{{user.bio}}</textarea>
             <input type="hidden" name="id" value="{{user.id}}" >
             <br>
+            <input type="hidden" name="searches" value="{{user.searches}}" >
             <input type="hidden" name="profile_picture" value="{{user.profile_picture}}">
             <input type="submit" value="Update">
           </form>

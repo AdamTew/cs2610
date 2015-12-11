@@ -1,3 +1,7 @@
 <div class="saved-search">
+  <form class="deletesearchform" action="/users/deletesearch" method="post">
+    <input type="hidden" name="search" value="{{search}}" >
+    <input type="submit" value="x">
+  </form>
   <p>#{{search}}</p>
 </div>

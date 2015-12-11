@@ -133,6 +133,7 @@ aside.saved-searches > div:first-child {
   height: inherit;
   border: #ADADAD solid 1px;
   border-radius: 10px;
+  padding:10px;
 }
 
 aside.saved-searches h2 {
@@ -159,6 +160,7 @@ aside.saved-searches div.saved-search:hover {
 
 div.saved-search > p {
   margin: 0;
+  float:left;
 }
 
 h3.no-result {

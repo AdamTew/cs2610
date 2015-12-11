@@ -130,13 +130,37 @@ router.post('/search', function(req,res){
 router.post('/savesearch', function(req,res){
   Users.find(req.session.userid, function(user){
     if(user){
-      user.searches.push(req.body.search)
-      Users.update(user,function(){
-        res.redirect('/users/search')
-      })
+      var index = user.searches.indexOf(req.body.search);
+      if(index < 0){
+        user.searches.push(req.body.search)
+        Users.update(user,function(){
+          console.log("Search saved");
+        })
+      }
+      res.redirect('/users/search')
     } else {
       res.redirect('/users/profile')
     }
+  })
+})
+
+router.post('/deletesearch', function(req,res){
+  Users.find(req.session.userid,function(user){
+    if(user){
+      console.log("found user " + user.username);
+      var index = user.searches.indexOf(req.body.search);
+      console.log("index of search " + req.body.search + " is " + index);
+      if (index > -1) {
+        console.log("deleting element");
+          var newArray = user.searches.splice(index + 1,1);
+          console.log(newArray);
+          user.searches = newArray;
+          Users.update(user, function(){
+            console.log("Saved searches updated");
+          });
+      }
+    }
+    res.redirect('/users/search');
   })
 })
 

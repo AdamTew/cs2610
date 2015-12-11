@@ -243,6 +243,46 @@ div.small-nav > ul > li {
   margin-top: 20px;
 }
 
+#userprofile > input[type="submit"]:hover {
+  background: blue;
+  color:white;
+}
+
+.deletesearchform {
+  padding-left: 10px;
+  padding-right: 5px;
+  float: right;
+}
+
+.deletesearchform > input[type="submit"] {
+  cursor:pointer;
+  background: none;
+  font-size:1em;
+  color: white;
+  float:right;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.deletesearchform > input[type="submit"]:hover {
+  color: #666;
+  border: 1px solid #eee;
+}
+
+.savebutton {
+    width: 100%;
+    border: 1px solid blue;
+    float: left;
+    padding: 10px;
+    color: blue;
+    cursor: pointer;
+}
+
+.savebutton:hover {
+  color:white;
+  background: blue;
+}
+
 /******************************/
 /** 5. Media query targeting **/
 /** medium to small screens  **/
