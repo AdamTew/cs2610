@@ -63,8 +63,12 @@ router.get('/profile',function(req,res){
 
 router.post('/profile', function(req,res){
   body = req.body;
-  console.log(JSON.stringify(body))
-  Users.update(body, function(){
+  var user = body;
+  var searches = body.searches.split(",");
+  console.log(searches);
+  user.searches = searches;
+  console.log(user);
+  Users.update(user, function(){
     res.redirect('/users/profile');
   })
 })
@@ -83,7 +87,7 @@ router.get('/search', function(req,res){
     res.render('search', {
       title: 'Welcome | Search',
       results : [],
-      saved: [],
+      saved: savedsearches,
       query: ''
     })
   })
@@ -132,6 +136,7 @@ router.post('/savesearch', function(req,res){
     if(user){
       var index = user.searches.indexOf(req.body.search);
       if(index < 0){
+        console.log(user);
         user.searches.push(req.body.search)
         Users.update(user,function(){
           console.log("Search saved");
